@@ -47,6 +47,7 @@ public class AnuSpringBootApplication implements CommandLineRunner {
 
 		// Instead of using repo obj directly, we use Service obj
 		//studentRepository.save(s1);
-		System.out.println("Student Bean persisted:"+studentService.createStudent(s1));
+		StudentDTO studentCreated = studentService.createStudent(s1);
+		System.out.println("Student Bean persisted:"+studentCreated);
 	}
 }

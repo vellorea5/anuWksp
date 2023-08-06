@@ -1,6 +1,6 @@
-GitRepositoriesView.GitDirectories=
-GitRepositoriesView.GitDirectories.relative=
+GitRepositoriesView.GitDirectories=C\:\\anuWksp\\.git;
+GitRepositoriesView.GitDirectories.relative=.git;
 RepositoryGroups.uuids=
-RepositorySearchDialogSearchPath=C\:\\Users\\Asif Vellore\\git
+RepositorySearchDialogSearchPath=C\:\\anuWksp
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1
