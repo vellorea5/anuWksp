@@ -1,0 +1,30 @@
+package com.example.anuspringboot.service;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.anuspringboot.dao.StudentRepository;
+import com.example.anuspringboot.dto.StudentDTO;
+import com.example.anuspringboot.entity.StudentEntity;
+
+@Service
+//For CRUD operations
+public class StudentService {
+	
+	@Autowired
+	StudentRepository studentRepository;
+	
+	public StudentDTO createStudent(StudentDTO studentDTO) {
+
+		StudentEntity studentEntity = new StudentEntity();
+		BeanUtils.copyProperties(studentDTO, studentEntity);
+		
+		StudentEntity newStudentEntity = studentRepository.save(studentEntity);
+		
+		StudentDTO studentCreated=new StudentDTO();
+		BeanUtils.copyProperties(studentEntity, studentCreated);
+		
+		return studentCreated;
+	}
+}

@@ -1,5 +1,7 @@
 package com.example.anuspringboot;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -23,9 +25,10 @@ public class AnuSpringBootApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
 
-		// Any class variables declared can't be used in main as main is static and
-		// non static variables can't be used, hence using run method of
-		// SpringApplication.
+		/*
+		 * Any class variables declared can't be used in main as main is static and non
+		 * static variables can't be used, hence using run method of SpringApplication.
+		 */
 		SpringApplication.run(AnuSpringBootApplication.class, args);
 	}
 
@@ -35,19 +38,29 @@ public class AnuSpringBootApplication implements CommandLineRunner {
 		System.out.println("Anu Spring Boot Application started and running...");
 
 		// Comment below call when demo...ing REST Controller
-		//demoJPA(ctxt);
+		demoJPA(ctxt);
 	}
 
 	public void demoJPA(ApplicationContext ctxt) {
-		// Dependency Injection example
-		// Instead of exposing an entity obj, we use DTO (Data Transfer Object).
-		// StudentEntity s1 = (StudentEntity) ctxt.getBean("student");
+		/* 
+		 * Dependency Injection example
+		 * Instead of exposing an entity obj, we use DTO (Data Transfer Object).
+		 * StudentEntity s1 = (StudentEntity) ctxt.getBean("student");
+		 */
 		StudentDTO s1 = (StudentDTO) ctxt.getBean("student");
 		System.out.println("Student bean injected:"+s1);
 
-		// Instead of using repo obj directly, we use Service obj
-		//studentRepository.save(s1);
-		StudentDTO studentCreated = studentService.createStudent(s1);
-		System.out.println("Student Bean persisted:"+studentCreated);
+		/* 
+		 * Instead of using repo obj directly, we use Service obj
+		 * studentRepository.save(s1);  
+		 */
+ 		//StudentDTO studentCreated = studentService.createStudent(s1);
+		//System.out.println("Student Bean persisted:"+studentCreated);
+		
+		StudentDTO studentFound = studentService.findStudent(3);
+		System.out.println("Student Found:"+studentFound);
+		
+		List<StudentDTO> students = studentService.getAllStudents();
+		students.forEach(System.out::println);
 	}
 }
