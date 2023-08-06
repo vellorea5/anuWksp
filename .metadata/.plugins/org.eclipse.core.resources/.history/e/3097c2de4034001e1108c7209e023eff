@@ -1,0 +1,10 @@
+package com.example.anuspringboot.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.anuspringboot.entity.Course;
+
+public interface CourseRepository extends JpaRepository<Course, Integer> {
+	// No need to write any code for CRUD operations
+	// will be inherited from JpaRepository
+}

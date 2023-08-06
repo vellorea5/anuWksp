@@ -1,0 +1,5 @@
+package com.example.anuspringboot.dao;
+
+public class CourseRepository {
+
+}

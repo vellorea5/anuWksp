@@ -1,0 +1,6 @@
+package com.example.anuspringboot.dto;
+
+public class StudentDTO {
+	int id;
+	String name;
+}

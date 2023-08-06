@@ -1,0 +1,9 @@
+package com.example.anuspringboot.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+//For CRUD operations
+public class StudentService {
+	public void create
+}

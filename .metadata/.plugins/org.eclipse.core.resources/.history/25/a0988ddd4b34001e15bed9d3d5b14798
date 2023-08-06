@@ -1,0 +1,18 @@
+package com.example.anuspringboot.restcontroller;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.anuspringboot.dto.StudentDTO;
+
+@RestController
+public class StudentRESTController {
+	
+	@PostMapping("/createstudent")
+	public StudentDTO createStudent(@RequestBody StudentDTO studentDTO) {
+	
+		
+		
+		return studentAdded;
+	}
+}

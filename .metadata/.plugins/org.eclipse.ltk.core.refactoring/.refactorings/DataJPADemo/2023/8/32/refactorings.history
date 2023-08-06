@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Employee.java&apos; to &apos;AnuSpringBoot/src/main/java/com.example.anuspringboot.entity&apos;&#x0D;&#x0A;- Original project: &apos;DataJPADemo&apos;&#x0D;&#x0A;- Destination element: &apos;AnuSpringBoot/src/main/java/com.example.anuspringboot.entity&apos;&#x0D;&#x0A;- Original element: &apos;com.example.datajpademo.beans.Employee.java&apos;" description="Copy compilation unit" destination="=AnuSpringBoot/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.anuspringboot.entity" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.datajpademo.beans{Employee.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1691316625287" units="1" version="1.0"/>
+</session>

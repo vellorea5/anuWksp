@@ -1,0 +1,21 @@
+package com.example.anuspringboot;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.example.anuspringboot.entity.Course;
+import com.example.anuspringboot.entity.Topic;
+
+@SpringBootApplication
+public class AnuSpringBootApplication {
+
+	public static void main(String[] args) {
+		ApplicationContext ctxt = new ClassPathXmlApplicationContext("springconfig.xml");
+		
+		Course c1 = (Course)ctxt.getBean("course");
+		System.out.println(c1);
+	}
+
+}

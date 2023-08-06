@@ -1,0 +1,13 @@
+package com.example.anuspringboot.service;
+
+import org.springframework.stereotype.Service;
+
+import com.example.anuspringboot.dto.StudentDTO;
+
+@Service
+//For CRUD operations
+public class StudentService {
+	public void createStudent(StudentDTO studentDTO) {
+		
+	}
+}

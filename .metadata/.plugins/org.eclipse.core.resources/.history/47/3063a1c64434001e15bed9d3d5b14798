@@ -1,0 +1,6 @@
+package com.example.anuspringboot.service;
+
+@Service
+public class StudentService {
+	
+}
